@@ -5,8 +5,8 @@ import functools
 class Version:
     def __init__(self, version: str):
         self.version = version
-        self.digit_part = self.getting_digit_part_list()
-        self.letter_part = self.getting_letter_part_list()
+        self.digit_part = list(self.getting_digit_part_list())
+        self.letter_part = list(self.getting_letter_part_list())
 
     def to_standard_format(self):
         literals = (('a', '-alpha'), ('b', '-beta'), ('r', '-rc'))
