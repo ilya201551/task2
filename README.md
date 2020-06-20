@@ -1,19 +1,18 @@
-# task2
+# Task2
 
-**def to_standard_format**:
-  - brings all versions to a common view
-  
-**def getting_digit_part**:
-  - return digit part
+Расширить реализацию класса Version (см. файл task_2.py), чтобы позволять использовать его для
+семантического сравнения.
 
-**def getting_letter_part**:
-  - return letter part
- 
- **def getting_digit_part_list**:
-  - return list with int digit part
-  
-  **def getting_letter_part_list**:
-  - replacing the letter part with numeric equivalents and return int list
- 
-**def __lt__**:
-  - compares the digit part first, then if it is the same, compares the letter part
+Пример:
+
+>>> Version('1.1.3') < Version('2.2.3')
+True
+
+>>> Version('1.3.0') > Version('0.3.0')
+True
+
+>>> Version('0.3.0b') < Version('1.2.42')
+True
+
+>>> Version('1.3.42') == Version('42.3.1')
+False
